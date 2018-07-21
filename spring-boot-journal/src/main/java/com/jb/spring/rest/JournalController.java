@@ -11,7 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.jb.spring.domain.Journal;
+import com.jb.spring.domain.entity.Journal;
+import com.jb.spring.domain.service.MyService;
 import com.jb.spring.repository.JournalRepository;
 
 @Controller
@@ -21,6 +22,9 @@ public class JournalController {
 	
 	@Autowired
 	JournalRepository repo;
+	
+	@Autowired
+	MyService mySvc;
 	
 	@RequestMapping("/")
 	public String index(Model model) {
@@ -34,6 +38,9 @@ public class JournalController {
 
 	@RequestMapping(value="/journals", produces= {MediaType.APPLICATION_JSON_UTF8_VALUE})
 	public @ResponseBody List<Journal> getJournal(){
+		
+		log.info(":: @Value 테스트 :: Server Info : "+ mySvc.getServer());
+		
 		return repo.findAll();
 	}
 }

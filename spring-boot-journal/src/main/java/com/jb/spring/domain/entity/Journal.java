@@ -1,4 +1,4 @@
-package com.jb.spring.domain;
+package com.jb.spring.domain.entity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

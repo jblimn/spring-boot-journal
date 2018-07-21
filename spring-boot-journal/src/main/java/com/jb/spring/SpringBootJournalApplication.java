@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-import com.jb.spring.domain.Journal;
+import com.jb.spring.domain.entity.Journal;
 import com.jb.spring.repository.JournalRepository;
 
 @SpringBootApplication
