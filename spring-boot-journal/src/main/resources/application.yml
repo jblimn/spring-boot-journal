@@ -1,0 +1,3 @@
+spring:
+  banner:
+    location: classpath:/META-INF/banner.txt
